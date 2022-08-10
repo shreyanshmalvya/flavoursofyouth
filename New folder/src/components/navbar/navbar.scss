@@ -1,0 +1,180 @@
+@font-face {
+    font-family: Scratchy;
+    src: "../../assets/fonts/Scratchy.ttf";
+    font-weight: 400;
+}
+
+.navbarWrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+    padding-inline: 50px;
+    margin: 10px;
+    margin-top: 0;
+    height: 60px;
+    .logo {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        img {
+            justify-content: flex-start;
+            width: 200px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                cursor: pointer;
+                width: 220px;
+            }
+        }
+    }
+    .joinWrapper {
+        display: flex;
+        flex: 0.3;
+        justify-content: space-evenly;
+        .joinButton {
+            background: rgba( 255, 255, 255, 0.6 );
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.199);
+            backdrop-filter: blur( 7.5px );
+            -webkit-backdrop-filter: blur( 7.5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 22px;
+            font-family: "Scratchy";
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .navbarWrapper {
+        padding: 25px;
+        .logo {
+            flex: 0.9 !important;
+            img {
+                width: 190px;
+            }
+        }
+        .joinWrapper {
+            flex: 0.4 !important;
+            .joinButton {
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbarWrapper {
+        padding: 25px;
+        .logo {
+            flex: 0.7 !important;
+            img {
+                width: 190px;
+            }
+        }
+        .joinWrapper {
+            flex: 0.4 !important;
+            .joinButton {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .navbarWrapper {
+        padding: 15px;
+        .logo {
+            flex: 0.6 !important;
+            img {
+                width: 160px;
+                &:hover {
+                    cursor: pointer;
+                    width: 165px;
+                }
+            }
+        }
+        .joinWrapper {
+            flex: 0.4 !important;
+            .joinButton {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .navbarWrapper {
+        padding: 10px;
+        .logo {
+            img {
+                width: 150px;
+                &:hover {
+                    cursor: pointer;
+                    width: 155px;
+                }
+            }
+        }
+        .joinWrapper {
+            .joinButton {
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .navbarWrapper {
+        padding: 10px;
+        .logo {
+            img {
+                width: 130px;
+                &:hover {
+                    cursor: pointer;
+                    width: 145px;
+                }
+            }
+        }
+        .joinWrapper {
+            .joinButton {
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .navbarWrapper {
+        padding: 5px;
+        .logo {
+            img {
+                width: 130px;
+                &:hover {
+                    cursor: pointer;
+                    width: 135px;
+                }
+            }
+        }
+        .joinWrapper {
+            justify-content: flex-end;
+            .createButton {
+                display: none;
+            }
+            .joinButton {
+                font-size: 18px;
+            }
+        }
+    }
+}
