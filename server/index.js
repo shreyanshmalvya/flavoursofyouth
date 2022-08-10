@@ -1,8 +1,9 @@
 const http = require('http');
 const express = require('express');
-const app = express()
 const cors = require('cors')
 const {Server} = require('socket.io')
+
+const app = express()
 
 //server setup
 const port = process.env.PORT || 8080;
