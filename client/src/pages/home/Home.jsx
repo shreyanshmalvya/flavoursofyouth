@@ -5,6 +5,8 @@ import Navbar from '../../components/navbar/Navbar';
 import Search from '../../components/search/Search';
 
 function Home() {
+
+    // declare states using redux
   return (
 <div className='homeWrapper'>
             <div className='home'>
