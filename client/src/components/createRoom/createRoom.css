@@ -1,0 +1,76 @@
+.createWrapper {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.createWrapper .RoomWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.createWrapper .RoomWrapper .Room {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding-inline: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.createWrapper .RoomWrapper .Room .RoomInput {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+.createWrapper .RoomWrapper .Room .RoomInput input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+.createWrapper .RoomWrapper .Room .RoomInput input:hover {
+  cursor: pointer;
+}
+.createWrapper .RoomWrapper .Room .RoomInput::-moz-placeholder {
+  color: #000;
+}
+.createWrapper .RoomWrapper .Room .RoomInput:-ms-input-placeholder {
+  color: #000;
+}
+.createWrapper .RoomWrapper .Room .RoomInput::placeholder {
+  color: #000;
+}
+.createWrapper .createIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: Scratchy;
+  text-transform: uppercase;
+  padding: 0.6rem;
+  min-width: 100px;
+}
+.createWrapper .createIcon:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=createRoom.css.map */
