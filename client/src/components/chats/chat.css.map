@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "chat.scss"
-    ],
-    "names": [],
-    "file": "chat.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"chat.css"}
