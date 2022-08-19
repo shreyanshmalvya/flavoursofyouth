@@ -1,20 +1,41 @@
 import React from 'react'
-// import axios from 'axios';
 import './search.css'
+import { Navigate, Link } from 'react-router-dom';
 
-
-const Search = () => {
-    //declaring states
+const Search = ({ socket }) => {
+    //declaring states for search
     const [query, setQuery] = React.useState('')
-    const [search, setSearch] = React.useState('');
     const [searchResults, setSearchResults] = React.useState([]);
+    const [chatToggle, setChatToggle] = React.useState(false);
 
     //storing the value of the search input in the state
     const searchHandler = (e) => {
-        setSearch(query);
-        console.log(search)
+        //searching for the room
+        socket.emit("search_room", query);
+        socket.on("room_data", (data) => {
+            if (data.room !== null) {
+                setSearchResults(data.room);
+                console.log(data);
+            } else {
+                setSearchResults([{ name: "No results found", description: "no entry for the given topic" }]);
+            }
+        });
     };
-    //new comment
+
+    //joining the room from list of search results
+    const joinRoomList = (data) => {
+        console.log(data);
+        socket.emit("join_room_id", data);
+        socket.on("room_info", (data) => {
+            if (data.message === "joined room") {
+                console.log(data);
+                setChatToggle(true);
+            } else {
+                //show error message
+                alert("Room not found");
+            }
+        });
+    };
 
     return (
         <>
@@ -24,31 +45,49 @@ const Search = () => {
                         <input id='searchTerm' type="text" placeholder="Search for topics" onChange={(e) => setQuery(e.target.value)} />
                     </div>
                     <div className="searchIcon">
-                        <div className='searchButton' id='searchIcon' type="submit" onClick={() => searchHandler()}>Search</div>
+                        <div className='searchButton' id='searchIcon' type="submit" onClick={(e) => searchHandler(e)}>Search</div>
                     </div>
                 </div>
             </div >
             <div className="optionChat">
-                Wanna create a room for a new topic? Create Room
+                <div className="optionWrappers">
+                    Wanna create a room for a new topic?&nbsp;
+                    <Link to="/create-room" style={{ textDecoration: 'none', color: 'black' }}>
+                        <span className='onclickbtn'>Create Room </span>
+                    </Link>
+                    &nbsp; or &nbsp;
+                    <Link to="/join-room" style={{ textDecoration: 'none', color: 'black' }}>
+                        <span className='onclickbtn'> Join Room</span>
+                    </Link>
+                </div>
+                <div className="notice">
+                    <span>
+                        *use the create room option for private rooms
+                    </span>
+                </div>
             </div>
             <div className="searchResults">
-                {/* {searchResults.map((result, key) => {
+                {searchResults.map((result, key) => {
                     return (
                         //return data in leaflet from
                         <div className="resultWrapper" key={key}>
                             <div className="searchResult" >
                                 <div className="searchResultTitle">
-                                    {result.title}
+                                    {result.name}
                                 </div>
                                 <div className="searchResultDescription" >
                                     {result.description}
                                 </div>
-                                <div className="readOption" onClick={() => {}}>
+                                <div className="readOption" onClick={() => { joinRoomList(result._id) }}>
+                                    Join
                                 </div>
+                                {
+                                    chatToggle ? <Navigate to="/chat" /> : null
+                                }
                             </div>
                         </div>
                     );
-                })} */}
+                })}
             </div>
         </>
     )
