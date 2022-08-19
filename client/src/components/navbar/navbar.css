@@ -3,70 +3,39 @@
   src: "../../assets/fonts/Scratchy.ttf";
   font-weight: 400;
 }
-
 .navbarWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
   padding-top: 20px;
   padding-inline: 50px;
   margin: 10px;
   margin-top: 0;
   height: 60px;
 }
-
 .navbarWrapper .logo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
 .navbarWrapper .logo img {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   width: 200px;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 .navbarWrapper .logo img:hover {
   cursor: pointer;
   width: 220px;
 }
-
 .navbarWrapper .joinWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0.3;
-      -ms-flex: 0.3;
-          flex: 0.3;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex: 0.3;
+  justify-content: space-evenly;
 }
-
 .navbarWrapper .joinWrapper .joinButton {
   background: rgba(255, 255, 255, 0.6);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.199);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.199);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.199);
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
   border-radius: 10px;
@@ -80,17 +49,15 @@
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 .navbarWrapper .joinWrapper .joinButton:hover {
   background-color: #000;
   color: #fff;
 }
-
 .navbarWrapper .joinWrapper .joinButton a {
   text-decoration: none;
+  color: #000;
 }
 
 @media screen and (max-width: 1020px) {
@@ -98,53 +65,41 @@
     padding: 25px;
   }
   .navbarWrapper .logo {
-    -webkit-box-flex: 0.9 !important;
-        -ms-flex: 0.9 !important;
-            flex: 0.9 !important;
+    flex: 0.9 !important;
   }
   .navbarWrapper .logo img {
     width: 190px;
   }
   .navbarWrapper .joinWrapper {
-    -webkit-box-flex: 0.4 !important;
-        -ms-flex: 0.4 !important;
-            flex: 0.4 !important;
+    flex: 0.4 !important;
   }
   .navbarWrapper .joinWrapper .joinButton {
     font-size: 20px;
   }
 }
-
 @media screen and (max-width: 768px) {
   .navbarWrapper {
     padding: 25px;
   }
   .navbarWrapper .logo {
-    -webkit-box-flex: 0.7 !important;
-        -ms-flex: 0.7 !important;
-            flex: 0.7 !important;
+    flex: 0.7 !important;
   }
   .navbarWrapper .logo img {
     width: 190px;
   }
   .navbarWrapper .joinWrapper {
-    -webkit-box-flex: 0.4 !important;
-        -ms-flex: 0.4 !important;
-            flex: 0.4 !important;
+    flex: 0.4 !important;
   }
   .navbarWrapper .joinWrapper .joinButton {
     font-size: 20px;
   }
 }
-
 @media screen and (max-width: 610px) {
   .navbarWrapper {
     padding: 15px;
   }
   .navbarWrapper .logo {
-    -webkit-box-flex: 0.6 !important;
-        -ms-flex: 0.6 !important;
-            flex: 0.6 !important;
+    flex: 0.6 !important;
   }
   .navbarWrapper .logo img {
     width: 160px;
@@ -154,15 +109,12 @@
     width: 165px;
   }
   .navbarWrapper .joinWrapper {
-    -webkit-box-flex: 0.4 !important;
-        -ms-flex: 0.4 !important;
-            flex: 0.4 !important;
+    flex: 0.4 !important;
   }
   .navbarWrapper .joinWrapper .joinButton {
     font-size: 20px;
   }
 }
-
 @media screen and (max-width: 530px) {
   .navbarWrapper {
     padding: 10px;
@@ -178,7 +130,6 @@
     font-size: 16px;
   }
 }
-
 @media screen and (max-width: 480px) {
   .navbarWrapper {
     padding: 10px;
@@ -194,7 +145,6 @@
     font-size: 14px;
   }
 }
-
 @media screen and (max-width: 425px) {
   .navbarWrapper {
     padding: 5px;
@@ -207,9 +157,7 @@
     width: 135px;
   }
   .navbarWrapper .joinWrapper {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
   .navbarWrapper .joinWrapper .createButton {
     display: none;
@@ -217,5 +165,4 @@
   .navbarWrapper .joinWrapper .joinButton {
     font-size: 18px;
   }
-}
-/*# sourceMappingURL=navbar.css.map */
+}/*# sourceMappingURL=navbar.css.map */
