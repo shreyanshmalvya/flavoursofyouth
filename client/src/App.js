@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home socket={socket} />} />
+          <Route path="/" element={<Home socket={socket}  />} />
           <Route path="/create-room" element={<CreateRoomPage socket={socket} />} />
           <Route path="/join-room" element={<JoinPage socket={socket} />} />
           <Route path="/chat" element={<Chatpage socket={socket} />} />

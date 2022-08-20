@@ -25,6 +25,7 @@ const Search = ({ socket }) => {
     //joining the room from list of search results
     const joinRoomList = (data) => {
         console.log(data);
+        //add redux states for name and roomID
         socket.emit("join_room_id", data);
         socket.on("room_info", (data) => {
             if (data.message === "joined room") {
