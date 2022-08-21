@@ -1,16 +1,22 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { incrementByAmount } from '../../redux/roomData';
 
 function JoinRoom({socket}) {
   const [roomID, setRoomID] = React.useState('');
   const [navToggle, setNavToggle] = React.useState(false);
+
+  //initiating redux state
+  const dispatch = useDispatch();
 
   const joinRoom = () => {
     if (roomID !== '') {
       socket.emit('join_room_id', roomID);
       socket.on('room_info', (result) => {
         if (result.message === 'joined room') {
-          console.log(result);
+          const meta = result.result;
+          dispatch(incrementByAmount({name: meta.name, id: meta._id}));
           setNavToggle(true);
         } else {
           //show error message
