@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const roomDataSlice = createSlice({
     name : "roomData",
     initialState : {
-        roomData: {name : '', id : ''},
+        roomData: {name : '', id : '',},
     },
     reducers : {
         incrementByAmount : (state, action) => {
