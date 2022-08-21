@@ -1,12 +1,23 @@
 import React from 'react'
 import './search.css'
 import { Navigate, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
+import { incrementByAmount } from '../../redux/roomData';
 
 const Search = ({ socket }) => {
     //declaring states for search
     const [query, setQuery] = React.useState('')
     const [searchResults, setSearchResults] = React.useState([]);
     const [chatToggle, setChatToggle] = React.useState(false);
+
+    //initalizing redux state
+    const dispatch = useDispatch();
+    
+    //functiopn to pass RommName and RoomID into store
+    const roomData = (Name, ID) => {
+        dispatch(incrementByAmount({name: Name, id: ID}));
+        console.log("here")
+    };
 
     //storing the value of the search input in the state
     const searchHandler = (e) => {
@@ -79,7 +90,7 @@ const Search = ({ socket }) => {
                                 <div className="searchResultDescription" >
                                     {result.description}
                                 </div>
-                                <div className="readOption" onClick={() => { joinRoomList(result._id) }}>
+                                <div className="readOption" onClick={() => { joinRoomList(result._id); roomData(result.name, result._id) }}>
                                     Join
                                 </div>
                                 {
