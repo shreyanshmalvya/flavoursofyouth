@@ -1,0 +1,123 @@
+.chat {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .wrap {
+        padding: 0;
+        margin: 0;
+        width: 70vw;
+        background: hsla(0, 87%, 79%, 1);
+        background: linear-gradient(90deg, hsla(0, 87%, 79%, 1) 0%, hsla(6, 77%, 85%, 1) 100%);
+        background: -moz-linear-gradient(90deg, hsla(0, 87%, 79%, 1) 0%, hsla(6, 77%, 85%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(0, 87%, 79%, 1) 0%, hsla(6, 77%, 85%, 1) 100%);
+        // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F89999", endColorstr="#F6C0BA", GradientType=1 );
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        .chatHeader {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            font-family: "Scratchy";
+            text-transform: uppercase;
+            padding: 0.5rem;
+
+            .chatHeaderText {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #000;
+                letter-spacing: 3px;
+            }
+        }
+        .chatWrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .you {
+                .chatMessage {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    flex-direction: column;
+                    overflow-x: hidden;
+                    .chatMessageText {
+                        display: flex;
+                        width: fit-content;
+                        border-radius: 0.5rem;
+                        background-color: #fff;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                        border: rgba(0, 0, 0, 0.1) solid 1px;
+                        justify-content: left;
+                        padding: 5px 10px;
+                        font-size: 1.5rem;
+                        font-family: "Roboto", sans-serif;
+                    }
+                    .messageAlignWrapper {
+                        display: flex;
+                        flex-direction: row;
+                        .chatAuthor {
+                            padding-inline: 5px;
+                            font-size: 1.2rem;
+                        }
+                        .chatTime {
+                            padding-inline: 5px;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .other {
+                .chatMessage {
+                    display: flex;
+                    align-items: flex-end;
+                    padding-right: 0.5rem;
+                    border-radius: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    flex-direction: column;
+                    .chatMessageText {
+                        display: flex;
+                        width: fit-content;
+                        border-radius: 0.5rem;
+                        background-color: #fff;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                        border: rgba(0, 0, 0, 0.1) solid 1px;
+                        justify-content: left;
+                        padding: 5px 10px;
+                        font-size: 1.2rem;
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+                            Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                    }
+                    .messageAlignWrapper {
+                        display: flex;
+                        flex-direction: row;
+                        .chatAuthor {
+                            padding-inline: 5px;
+                            font-size: 1rem;
+                        }
+                        .chatTime {
+                            padding-inline: 5px;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        .chatFooter {
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+.messageContainer{
+    height: 35vh;
+    width: 100%;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+}
