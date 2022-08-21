@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import "./createRoom.css";
 import { Navigate } from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+import {incrementByAmount} from '../../redux/roomData';
 
 function CreateRoom({ socket }) {
   const [roomName, setRoomName] = React.useState('');
@@ -12,6 +14,8 @@ function CreateRoom({ socket }) {
   });
   const [redirectToggle, setRedirectToggle] = React.useState(false);
 
+  //initiating redux state
+  const dispatch = useDispatch();
  
   useEffect(() => {
     const setRoomData = () => {
@@ -32,7 +36,7 @@ function CreateRoom({ socket }) {
       socket.emit('create_room', data);
       socket.on('room_created', (result) => {
         if (result.message === true) {
-          console.log('room created');
+          dispatch(incrementByAmount({name: result.result.name, id: result.result._id}));
           setRedirectToggle(true);
         } else {
           //show error message
