@@ -61,7 +61,8 @@ io.on("connection", (socket) => {
         .then(result => {
             socket.join(result._id);
             socket.emit("room_created", {
-                message : true
+                message : true,
+                result : result
             })
             console.log((result._id));
         }).catch(err => {
@@ -83,6 +84,7 @@ io.on("connection", (socket) => {
                 socket.join(result._id);
                 socket.emit("room_info", {
                     message: "joined room",
+                    result: result,
                 });
             }else{
                 socket.emit("room_info", {
