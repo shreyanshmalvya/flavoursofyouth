@@ -1,12 +1,13 @@
 @font-face {
     font-family: Scratchy;
-    src: "../../assets/fonts/Scratchy.ttf" format("ttf");
-    src: "../../assets/fonts/Scratchy-Regular.woff2" format("woff2");
-    src: "../../assets/fonts/Scratchy-Regular.woff" format("woff");
-    src: "../../assets/fonts/Scratchy-Regular.woff" format("woff");
+    src: url("../../assets/fonts/Scratchy.ttf") format("ttf");
+    src: url("../../assets/fonts/Scratchy-Regular.woff2") format("woff2");
+    src: url("../../assets/fonts/Scratchy-Regular.woff") format("woff");
+    src: url("../../assets/fonts/Scratchy-Regular.woff") format("woff");
     url: ("../../assets/fonts/Scratchy-Regular.svg") format("svg");
     font-weight: 400;
 }
+
 
 .navbarWrapper {
     display: flex;
