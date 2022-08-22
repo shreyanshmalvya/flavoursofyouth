@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Scratchy;
+  src: "../../assets/fonts/Scratchy.ttf";
+  font-weight: 400;
+}
 .chat {
   display: flex;
   width: 100%;
