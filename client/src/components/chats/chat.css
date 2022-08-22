@@ -58,7 +58,7 @@
   border: rgba(0, 0, 0, 0.1) solid 1px;
   justify-content: left;
   padding: 5px 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
 }
 .chat .wrap .chatWrapper .you .chatMessage .messageAlignWrapper {
@@ -67,11 +67,11 @@
 }
 .chat .wrap .chatWrapper .you .chatMessage .messageAlignWrapper .chatAuthor {
   padding-inline: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .chat .wrap .chatWrapper .you .chatMessage .messageAlignWrapper .chatTime {
   padding-inline: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .chat .wrap .chatWrapper .other .chatMessage {
   display: flex;

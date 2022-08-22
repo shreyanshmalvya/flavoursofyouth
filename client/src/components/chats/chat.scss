@@ -56,7 +56,7 @@
                         border: rgba(0, 0, 0, 0.1) solid 1px;
                         justify-content: left;
                         padding: 5px 10px;
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
                         font-family: "Roboto", sans-serif;
                     }
                     .messageAlignWrapper {
@@ -64,11 +64,11 @@
                         flex-direction: row;
                         .chatAuthor {
                             padding-inline: 5px;
-                            font-size: 1.2rem;
+                            font-size: 1rem;
                         }
                         .chatTime {
                             padding-inline: 5px;
-                            font-size: 1.2rem;
+                            font-size: 1rem;
                         }
                     }
                 }
