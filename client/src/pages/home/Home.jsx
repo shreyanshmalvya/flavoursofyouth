@@ -24,7 +24,7 @@ function Home({ socket }) {
             <div>
                 {/* <button onClick={(e) => onOpenModal()}></button> */}
                 <div className="modal">
-                    <Modal className='modal' open={open} onClose={onCloseModal} center>
+                    <Modal className='modal' open={open} onClose={onCloseModal} closeOnEsc={false} closeOnOverlayClick ={false} blockScroll={false} showCloseIcon={false} center>
                         <div className="searchWrapper">
                             <div className="search">
                                 <div className="searchInput">

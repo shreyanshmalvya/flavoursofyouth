@@ -80,3 +80,29 @@ body {
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 900px) {
+  .react-responsive-modal-modal {
+    min-width: 650px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .react-responsive-modal-modal {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .react-responsive-modal-modal {
+    min-width: 400px;
+  }
+}
+@media screen and (max-width: 494px) {
+  .react-responsive-modal-modal {
+    min-width: 250px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .react-responsive-modal-modal {
+    min-width: 200px;
+  }
+}
