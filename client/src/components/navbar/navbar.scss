@@ -1,6 +1,10 @@
 @font-face {
     font-family: Scratchy;
-    src: "../../assets/fonts/Scratchy.ttf";
+    src: "../../assets/fonts/Scratchy.ttf" format("ttf");
+    src: "../../assets/fonts/Scratchy-Regular.woff2" format("woff2");
+    src: "../../assets/fonts/Scratchy-Regular.woff" format("woff");
+    src: "../../assets/fonts/Scratchy-Regular.woff" format("woff");
+    url: ("../../assets/fonts/Scratchy-Regular.svg") format("svg");
     font-weight: 400;
 }
 
@@ -33,12 +37,12 @@
         flex: 0.3;
         justify-content: space-evenly;
         .joinButton {
-            background: rgba( 255, 255, 255, 0.6 );
+            background: rgba(255, 255, 255, 0.6);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.199);
-            backdrop-filter: blur( 7.5px );
-            -webkit-backdrop-filter: blur( 7.5px );
+            backdrop-filter: blur(7.5px);
+            -webkit-backdrop-filter: blur(7.5px);
             border-radius: 10px;
-            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            border: 1px solid rgba(255, 255, 255, 0.18);
             border: 1px solid #000;
             border-radius: 5px;
             padding: 5px 10px;
@@ -53,9 +57,9 @@
                 background-color: #000;
                 color: #fff;
             }
-            a{
+            a {
                 text-decoration: none;
-                color:#000
+                color: #000;
             }
         }
     }
