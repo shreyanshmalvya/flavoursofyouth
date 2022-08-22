@@ -44,6 +44,7 @@ function Chat({ socket }) {
         <div className="chatHeader">
           <div className="chatHeaderText">
              <span>Topic :</span>  {roomName}
+             <span>ID : </span> {roomID}
           </div>
         </div>
         <div className="chatWrapper">
