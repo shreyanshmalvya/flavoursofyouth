@@ -115,9 +115,31 @@
     }
 }
 
-.messageContainer{
+.messageContainer {
     height: 35vh;
     width: 100%;
     overflow-x: hidden !important;
     overflow-y: scroll;
 }
+
+@media screen and (max-width: 768px) {
+    .chatHeaderText {
+        font-size: 1.5rem !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .chatHeaderText {
+        font-size: 1.2rem !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .chatHeaderText {
+        font-size: 1rem !important;
+    }
+}
+@media screen and (max-width: 360px) {
+    .chatHeaderText {
+        font-size: 0.8rem !important; 
+    }
+}
+    
