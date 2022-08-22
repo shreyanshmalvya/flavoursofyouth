@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 //estblishing connection with web socket
-const socket = io.connect('http://localhost:8080');
+const socket = io.connect('https://flavors-of-youth.herokuapp.com/');
 
 function App() {
   return (
